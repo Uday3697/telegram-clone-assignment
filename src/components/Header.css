@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-icon {
+  margin-left: -2rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.tabs-container {
+  margin-top: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.TabList {
+  display: flex;
+  overflow-x: auto;
+}
+
+.Tab {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.Tab--interactive:hover {
+  background-color: #f0f0f0;
+}
+
+.Tab--active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}

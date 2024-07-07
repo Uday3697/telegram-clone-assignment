@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { List, ListItem, ListItemText } from "@mui/material";
+import { useEffect, useState } from "react";
 import { getAllChats } from "../utils/api";
-
+import "./ChatList.css";
 interface Chat {
   id: number;
   creator: {
     name: string | null;
     email: string;
   };
+  unread_count?: number;
 }
 
-const ChatList: React.FC = () => {
+const ChatList = () => {
   const [chats, setChats] = useState<Chat[]>([]);
 
   useEffect(() => {
@@ -23,16 +23,32 @@ const ChatList: React.FC = () => {
   }, []);
 
   return (
-    <List>
-      {chats.map((chat) => (
-        <ListItem key={chat.id}>
-          <ListItemText
-            primary={chat.creator.name || chat.creator.email}
-            secondary={`Chat ID: ${chat.id}`}
-          />
-        </ListItem>
-      ))}
-    </List>
+    <div className="chat-container">
+
+      <div className="chat-list">
+        {chats.map((chat) => (
+          <div className="chat-item" key={chat.id}>
+            <div className="chat-item-left">
+              <div className="chat-avatar">
+                {/* Add avatar placeholder or component */}jj
+              </div>
+              <div className="chat-info">
+                <div className="chat-name">
+                  {chat.creator.name || chat.creator.email}
+                </div>
+                <div className="chat-last-message">Chat ID: {chat.id}</div>
+              </div>
+            </div>
+            <div className="chat-item-right">
+              {chat.unread_count && (
+                <div className="unread-count">{chat.unread_count}</div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
   );
 };
 

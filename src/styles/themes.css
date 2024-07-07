@@ -1,0 +1,36 @@
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #212121;
+  --color-text-light: #0000;
+  --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-button-bg-light: #f9f9f9;
+  --color-button-bg-dark: #1a1a1a;
+  --color-button-border-hover-light: #747bff;
+  --color-button-border-hover-dark: #646cff;
+}
+
+body[data-theme="light"] {
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+}
+
+body[data-theme="dark"] {
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-dark);
+}
+
+button {
+  background-color: var(--color-button-bg-light);
+}
+
+body[data-theme="dark"] button {
+  background-color: var(--color-button-bg-dark);
+}
+
+button:hover {
+  border-color: var(--color-button-border-hover-light);
+}
+
+body[data-theme="dark"] button:hover {
+  border-color: var(--color-button-border-hover-dark);
+}

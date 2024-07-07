@@ -8,10 +8,10 @@ const Home: React.FC = () => {
   return (
     <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       <Header />
-      <Box sx={{ display: "flex", flex: 1 }}>
+      <div>
         <ChatList />
         <ChatWindow />
-      </Box>
+      </div>
     </Box>
   );
 };
