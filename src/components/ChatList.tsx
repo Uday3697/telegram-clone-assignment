@@ -23,7 +23,8 @@ const ChatList = () => {
   }, []);
 
   return (
-    <div className="chat-container">
+    <div >
+      {/* <div className="chat-container"> */}
 
       <div className="chat-list">
         {chats.map((chat) => (
