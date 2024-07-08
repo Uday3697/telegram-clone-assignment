@@ -19,7 +19,21 @@
   overflow-y: auto;
   flex: 1;
   width: 100%;
-  background-color: transparent;
+}
+.chat-list {
+  overflow-y: auto;
+  flex: 1;
+  width: 100%;
+}
+
+.chat-list.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.chat-list.dark-theme {
+  background-color: #212121;
+  color: white;
 }
 
 .chat-item {

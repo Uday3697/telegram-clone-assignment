@@ -22,24 +22,12 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
         document.body.setAttribute("data-theme", theme);
     }, [theme]);
 
-    const backgroundImage = theme === "dark" ? "/images/dark-bg.jpg" : "/images/light-bg.jpg";
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <div
-                style={{
-                    height: "100vh",
-                    width: "100vw",
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                }}
-            >
-                {children}
-            </div>
+
+            {children}
+
         </ThemeContext.Provider>
     );
 };
