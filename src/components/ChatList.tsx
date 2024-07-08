@@ -31,7 +31,7 @@ const ChatList = () => {
           <div className="chat-item" key={chat.id}>
             <div className="chat-item-left">
               <div className="chat-avatar">
-                {/* Add avatar placeholder or component */}jj
+                {/* Add avatar placeholder or component */}
               </div>
               <div className="chat-info">
                 <div className="chat-name">

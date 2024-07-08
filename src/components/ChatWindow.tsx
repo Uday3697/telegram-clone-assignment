@@ -1,12 +1,24 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-
+import React from 'react';
+import { useTheme as useCustomTheme } from '../context/ThemeContext';
+import img from "../../public/darkbg.webp"
+import dark from "../../public/darkbg.webp"
 const ChatWindow: React.FC = () => {
+  const { theme } = useCustomTheme();
+
+  const backgroundImage = theme === 'dark' ? dark : img;
+
   return (
-    <Box>
-      <Typography variant="h6">Chat Window</Typography>
-      {/* Placeholder for chat content */}
-    </Box>
+    <div
+      style={{
+        height: '800px',
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        margin: 'auto',
+      }}
+    >
+      ChatWindow  theme
+    </div>
   );
 };
 
