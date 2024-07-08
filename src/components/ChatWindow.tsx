@@ -6,7 +6,10 @@ const ChatWindow: React.FC = () => {
 
   return (
     <div style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
-      <MessageComposer />
+      <div>
+
+        <MessageComposer />
+      </div>
     </div>
   );
 };

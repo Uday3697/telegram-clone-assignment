@@ -1,0 +1,62 @@
+.message-composer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .message-composer {
+    max-width: 90%;
+  }
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 40px;
+  background-color: var(--bg-color); /* Use CSS variables for theming */
+  color: var(--text-color);
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.placeholder-text {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+/* Theme variables */
+:root {
+  --bg-color-light: white;
+  --bg-color-dark: #212121;
+  --text-color-light: black;
+  --text-color-dark: white;
+}
+
+/* Applying theme */
+body[data-theme="light"] .message-composer {
+  --bg-color: var(--bg-color-light);
+  --text-color: var(--text-color-light);
+}
+
+body[data-theme="dark"] .message-composer {
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--text-color-dark);
+}
