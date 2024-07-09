@@ -7,7 +7,6 @@
 .headCOntainer {
   display: flex;
   justify-content: center;
-  /* height: 56; */
 }
 
 .menu-button {
@@ -17,7 +16,7 @@
   cursor: pointer;
   margin-right: 1rem;
   border: none;
-  color: #000;
+  /* color: #000; */
 }
 
 .search-bar {
@@ -52,6 +51,7 @@
 /* for popup menu csss */
 .menu-container {
   min-width: 235px;
+  padding: 10px;
 }
 
 .menu-popup-overlay {
@@ -60,7 +60,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,12 +68,17 @@
 }
 
 .menu-container {
-  background: #fff;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   width: 100%;
+}
+.menu-container.light-theme {
+  color: #000;
+}
+.menu-container.dark-theme {
+  background: #fff;
 }
 /* CustomMenu.css */
 .MenuItem {
@@ -90,7 +95,6 @@
   line-height: 1.5rem;
   white-space: nowrap;
   cursor: var(--custom-cursor, pointer);
-  /* margin-right: 20px; */
 }
 
 @media (min-width: 600px) {
@@ -113,24 +117,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   z-index: 1000;
 }
 
 .menu-container {
   position: absolute;
-  background: #fff;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 250px;
-}
-
-.footer {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #888;
 }
 
 .MenuItem .icon {
@@ -139,11 +135,4 @@
 
 .Switcher {
   margin-left: auto;
-}
-
-.footer {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #888;
 }

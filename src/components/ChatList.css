@@ -10,15 +10,13 @@
   .chat-container {
     width: 25%;
   }
-  .chat-list {
-    /* max-width: 25%; */
-  }
 }
 
 .chat-list {
   overflow-y: auto;
   flex: 1;
   width: 100%;
+  background-color: transparent;
 }
 .chat-list {
   overflow-y: auto;
@@ -48,7 +46,7 @@
 }
 
 .chat-item:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(66, 63, 63, 0.05);
 }
 
 .chat-avatar {
