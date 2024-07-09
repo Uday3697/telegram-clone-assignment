@@ -8,7 +8,7 @@ const MessageComposer: React.FC = () => {
     const [showEmojiPicker, setShowEmojiPicker] = useState<boolean>(false);
     const inputRef = useRef<HTMLDivElement>(null);
 
-    const onEmojiClick = (event: any, emojiObject: any) => {
+    const onEmojiClick = (emojiObject: any) => {
         const cursorPos: any = inputRef.current?.onselectstart || message.length;
         const textBeforeCursor = message.slice(0, cursorPos);
         const textAfterCursor = message.slice(cursorPos);
